@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a New Pet</title>
+</head>
+<body>
+    <h1>Add a New Pet</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name(size=30) }}<br>
+        {{ form.species.label }} {{ form.species(size=30) }}<br>
+        {{ form.photo_url.label }} {{ form.photo_url(size=30) }}<br>
+        {{ form.age.label }} {{ form.age(size=5) }}<br>
+        {{ form.notes.label }} {{ form.notes(rows=4, cols=30) }}<br>
+        <input type="submit" value="Add Pet">
+    </form>
+    <a href="/">Back to Homepage</a>
+</body>
+</html>
